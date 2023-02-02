@@ -11,17 +11,28 @@ fun main() {
 //        println("Finally")
 //    }
 
-    val scanner = Scanner(System.`in`)
+//    val scanner = Scanner(System.`in`)
+//
+//    val input = scanner.nextLine()
+//
+//    val num: Int?
+//
+//    try {
+//        num = input.toInt()
+//        val div = 20 / num
+//        println(div)
+//    }catch (e: Exception) {
+//        println(e.message)
+//    }
 
-    val input = scanner.nextLine()
+    val person = Person("James")
 
-    val num: Int?
+    person.name = null
 
-    try {
-        num = input.toInt()
-        val div = 20 / num
-        println(div)
-    }catch (e: Exception) {
-        println(e.message)
-    }
+
+    val s = person.name ?: throw IllegalArgumentException("Name required")
+
+    println(s)
 }
+
+class Person(var name: String?)
