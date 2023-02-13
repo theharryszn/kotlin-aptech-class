@@ -14,6 +14,10 @@ fun Int.isEven(): Boolean {
     return this % 2 == 0
 }
 
+fun Array<Int>.wisdom() {
+
+}
+
 fun String.capital(index: Int): String {
     val arr = this.toCharArray()
     arr[index] = this[index].toUpperCase()
