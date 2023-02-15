@@ -5,7 +5,12 @@ fun interface Format {
 }
 
 fun main() {
-    val formatter = Format { "$it- formatted" }
+    val formatter = object : Format {
+        override fun format(str: String): String {
+            TODO("Not yet implemented")
+        }
+
+    }
 
     println(formatter.format("Name"))
 }
